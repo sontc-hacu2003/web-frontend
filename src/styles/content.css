@@ -1,0 +1,143 @@
+/* ───────────────────────────────────────────────
+   Content / info pages — shared templates
+   ─────────────────────────────────────────────── */
+
+/* Hero band */
+.page-hero { background: var(--color-surface); padding: var(--space-16) 0; text-align: center; }
+.page-hero .eyebrow { display: block; margin-bottom: var(--space-3); }
+.page-hero h1 { font-size: clamp(30px, 4vw, 48px); font-weight: 700; letter-spacing: -0.02em; }
+.page-hero p { max-width: 620px; margin: var(--space-4) auto 0; color: var(--color-body); font-size: 16px; }
+
+/* Prose */
+.prose { max-width: 760px; margin: 0 auto; padding: var(--space-16) 0; }
+.prose h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin: var(--space-10) 0 var(--space-4); }
+.prose h2:first-child { margin-top: 0; }
+.prose h3 { font-size: 16px; font-weight: 600; margin: var(--space-6) 0 var(--space-2); }
+.prose p { color: var(--color-body); font-size: 16px; line-height: 1.7; margin: 0 0 var(--space-4); }
+.prose ul { color: var(--color-body); font-size: 16px; line-height: 1.7; padding-left: 22px; margin: 0 0 var(--space-4); }
+.prose li { margin-bottom: 8px; }
+.prose a.inline { color: var(--color-heading); border-bottom: 1px solid var(--color-border); }
+.prose .lede { font-size: 19px; line-height: 1.6; color: var(--color-heading); }
+
+/* Two-column with sticky TOC */
+.doc { display: grid; grid-template-columns: 220px 1fr; gap: var(--space-12); max-width: 1000px; margin: 0 auto; padding: var(--space-16) 0; }
+.toc { position: sticky; top: calc(var(--header-h) + 24px); align-self: start; }
+.toc h4 { font-size: 11px; text-transform: uppercase; letter-spacing: var(--tracking-uppercase); color: var(--color-muted); margin-bottom: var(--space-3); }
+.toc a { display: block; font-size: 14px; color: var(--color-body); padding: 7px 0; }
+.toc a:hover { color: var(--color-heading); }
+
+/* Editorial image band */
+.media-band { padding: 0 0 var(--space-16); }
+.media-band image-slot { width: 100%; height: 460px; }
+.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-8); max-width: 1000px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-16); }
+.value-grid .v-num { font-size: 13px; font-weight: 700; color: var(--color-muted); }
+.value-grid h3 { font-size: 18px; font-weight: 700; margin: var(--space-2) 0; }
+.value-grid p { font-size: 14px; color: var(--color-body); line-height: 1.6; }
+
+/* ─── Contact ─── */
+.contact { display: grid; grid-template-columns: 1fr 360px; gap: var(--space-12); max-width: 1040px; margin: 0 auto; padding: var(--space-16) 0; align-items: start; }
+.contact-form .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.contact-form textarea {
+  width: 100%; padding: 13px 14px; font-family: inherit; font-size: 14px; min-height: 130px; resize: vertical;
+  border: 1px solid var(--color-border); outline: none;
+}
+.contact-form textarea:focus { border-color: var(--color-ink); }
+.contact-info { border: 1px solid var(--color-border); padding: var(--space-6); }
+.contact-info h3 { font-size: 13px; text-transform: uppercase; letter-spacing: var(--tracking-wide); margin-bottom: var(--space-5); }
+.contact-item { display: flex; gap: 14px; padding: var(--space-3) 0; }
+.contact-item svg { width: 20px; height: 20px; stroke: var(--color-ink); fill: none; flex: none; margin-top: 2px; }
+.contact-item .ci-label { font-size: 12px; color: var(--color-muted); }
+.contact-item .ci-val { font-size: 14px; color: var(--color-heading); font-weight: 500; margin-top: 2px; }
+
+/* ─── Size guide ─── */
+.size-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--color-border); margin-bottom: var(--space-6); }
+.size-tabs button {
+  padding: 14px 22px; background: none; border: 0; border-bottom: 2px solid transparent;
+  font-size: 14px; font-weight: 600; color: var(--color-muted);
+}
+.size-tabs button.is-active { color: var(--color-heading); border-bottom-color: var(--color-ink); }
+.size-table { width: 100%; border-collapse: collapse; display: none; }
+.size-table.is-active { display: table; }
+.size-table th, .size-table td { text-align: left; padding: 14px 16px; font-size: 14px; border-bottom: 1px solid var(--color-border); }
+.size-table thead th { font-size: 12px; text-transform: uppercase; letter-spacing: var(--tracking-wide); color: var(--color-muted); background: var(--color-surface); }
+.size-table tbody tr:hover { background: var(--color-surface); }
+.size-note { font-size: 13px; color: var(--color-muted); margin-top: var(--space-5); }
+
+/* ─── Order tracking ─── */
+.track-box { max-width: 560px; margin: 0 auto var(--space-12); }
+.track-form { display: flex; gap: 0; margin-top: var(--space-6); }
+.track-form input { flex: 1; padding: 15px 18px; border: 1px solid var(--color-ink); border-right: 0; font-family: inherit; font-size: 15px; outline: none; }
+.track-result { max-width: 720px; margin: 0 auto; }
+.track-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: var(--space-5); border-bottom: 1px solid var(--color-border); margin-bottom: var(--space-8); flex-wrap: wrap; gap: var(--space-3); }
+.track-head .th-id { font-size: 18px; font-weight: 700; }
+.track-head .th-meta { font-size: 13px; color: var(--color-muted); margin-top: 4px; }
+.timeline { position: relative; padding-left: 40px; }
+.timeline::before { content: ""; position: absolute; left: 13px; top: 6px; bottom: 30px; width: 2px; background: var(--color-border); }
+.tl-step { position: relative; padding-bottom: var(--space-8); }
+.tl-step::before { content: ""; position: absolute; left: -33px; top: 2px; width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--color-border); background: #fff; }
+.tl-step.done::before { background: var(--color-ink); border-color: var(--color-ink); }
+.tl-step.current::before { border-color: var(--color-ink); box-shadow: 0 0 0 4px rgba(0,0,0,0.08); }
+.tl-step .tl-title { font-size: 15px; font-weight: 600; }
+.tl-step .tl-time { font-size: 13px; color: var(--color-muted); margin-top: 3px; }
+
+/* ─── Stores ─── */
+.store-map image-slot { width: 100%; height: 320px; }
+.store-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); padding: var(--space-12) 0; }
+.store-card { border: 1px solid var(--color-border); padding: var(--space-5); }
+.store-card h3 { font-size: 16px; font-weight: 700; margin-bottom: var(--space-2); }
+.store-card .sc-city { font-size: 11px; text-transform: uppercase; letter-spacing: var(--tracking-wide); color: var(--color-muted); margin-bottom: var(--space-3); }
+.store-card p { font-size: 14px; color: var(--color-body); line-height: 1.6; margin: 0 0 var(--space-3); }
+.store-card .sc-hours { font-size: 13px; color: var(--color-muted); }
+.store-card a.sc-dir { display: inline-block; margin-top: var(--space-3); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: var(--tracking-wide); border-bottom: 1px solid var(--color-ink); padding-bottom: 2px; }
+
+/* ─── Careers ─── */
+.jobs { max-width: 860px; margin: 0 auto; padding: var(--space-16) 0; }
+.job-filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: var(--space-8); }
+.job-filters button { padding: 8px 16px; border: 1px solid var(--color-border); background: #fff; font-size: 13px; border-radius: var(--radius-pill); }
+.job-filters button.is-active { background: var(--color-ink); color: #fff; border-color: var(--color-ink); }
+.job-row { display: flex; align-items: center; justify-content: space-between; padding: var(--space-5) 0; border-bottom: 1px solid var(--color-border); gap: var(--space-4); }
+.job-row .jr-title { font-size: 17px; font-weight: 600; }
+.job-row .jr-meta { font-size: 13px; color: var(--color-muted); margin-top: 4px; display: flex; gap: 14px; flex-wrap: wrap; }
+.job-row .jr-arrow { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; flex: none; }
+.job-row:hover .jr-arrow { background: var(--color-ink); color: #fff; border-color: var(--color-ink); }
+.job-row .jr-arrow svg { width: 18px; height: 18px; }
+
+/* ─── Membership tiers ─── */
+.tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); max-width: 1040px; margin: 0 auto; padding: var(--space-16) 0; }
+.tier-card { border: 1px solid var(--color-border); padding: var(--space-8) var(--space-6); }
+.tier-card.featured { border-color: var(--color-ink); position: relative; }
+.tier-card.featured::before { content: "Phổ biến"; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: var(--color-ink); color: #fff; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: var(--tracking-wide); padding: 4px 12px; }
+.tier-card .tc-name { font-size: 13px; text-transform: uppercase; letter-spacing: var(--tracking-wide); color: var(--color-muted); }
+.tier-card .tc-spend { font-size: 24px; font-weight: 700; margin: var(--space-2) 0 var(--space-5); letter-spacing: -0.02em; }
+.tier-card ul { list-style: none; margin: 0 0 var(--space-6); padding: 0; }
+.tier-card li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--color-body); padding: 7px 0; }
+.tier-card li svg { width: 16px; height: 16px; stroke: var(--color-success); flex: none; margin-top: 3px; }
+.tier-card .btn { width: 100%; }
+
+/* ─── Vouchers / my offers ─── */
+.voucher-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5); padding: var(--space-12) 0; }
+.voucher-card { display: flex; border: 1px dashed var(--color-border); overflow: hidden; }
+.voucher-card .vc-left { background: var(--color-ink); color: #fff; padding: var(--space-6); display: flex; flex-direction: column; justify-content: center; align-items: center; min-width: 130px; text-align: center; }
+.voucher-card .vc-amt { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; }
+.voucher-card .vc-unit { font-size: 12px; opacity: .7; text-transform: uppercase; letter-spacing: var(--tracking-wide); }
+.voucher-card .vc-body { padding: var(--space-5); flex: 1; }
+.voucher-card .vc-title { font-size: 15px; font-weight: 600; }
+.voucher-card .vc-cond { font-size: 13px; color: var(--color-muted); margin: 6px 0 var(--space-3); }
+.voucher-card .vc-code { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; }
+.voucher-card .vc-code strong { font-family: var(--font-mono, monospace); letter-spacing: 1px; border: 1px dashed var(--color-border); padding: 3px 8px; }
+.voucher-card .vc-code button { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: var(--tracking-wide); border: 0; background: none; color: var(--color-ink); border-bottom: 1px solid var(--color-ink); }
+.voucher-card.expired { opacity: .55; }
+.voucher-card.expired .vc-left { background: var(--color-muted); }
+
+@media (max-width: 900px) {
+  .doc { grid-template-columns: 1fr; gap: var(--space-6); }
+  .toc { position: static; display: flex; gap: 16px; flex-wrap: wrap; padding-bottom: var(--space-4); border-bottom: 1px solid var(--color-border); }
+  .toc h4 { width: 100%; }
+  .contact { grid-template-columns: 1fr; gap: var(--space-8); }
+  .value-grid, .store-grid, .tiers { grid-template-columns: 1fr; }
+  .voucher-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .contact-form .field-row { grid-template-columns: 1fr; }
+  .size-table { font-size: 13px; }
+}
